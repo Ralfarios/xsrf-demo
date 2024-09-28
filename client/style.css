@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+
+:root {
+  font-family: Manrope, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: #E8E8E8;
+  color: #00017B;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+}
+
+.header {
+  width: 100%;
+  /* height: 300px; */
+  display: flex;
+  justify-content: center;
+}
+
+.header__child {
+  width: fit-content;
+}
+
+.head {
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+.sub-head {
+  font-family: "Zen Kaku Gothic New";
+  font-size: 2em;
+  font-weight: 600;
+  margin-top: -0.5em;
+}
+
+#form {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.submit {
+  font-family: "Zen Kaku Gothic New";
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #00017B;
+  color: #E8E8E8;
+  padding-top: 12px;
+  padding-bottom: 16px;
+
+  transition: background-color 0.2s;
+}
+
+.submit:hover {
+  background-color: #7b0000;
+}

