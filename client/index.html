@@ -1,33 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XSRF - SIMULATION</title>
-  </head>
-  <body>
-    <div id="app">
-      <div style="padding: 24px">
-        <div class="header">
-          <div class="header__child">
-            <h1 class="head">XSRF - SIMULATION</h1>
-            <p class="sub-head">XSRF - シミュレーション</p>
-          </div>
-        </div>
 
-        <form action="http://localhost:8000/users" method="post" id="form">
-          <input type="hidden" name="username" value="akuma" />
-          <input type="hidden" name="password" value="123123" />
-          <input type="hidden" name="is_premium" value="true" />
-          <input
-            type="submit"
-            name="btnSubmit"
-            value="SUBMIT/提出"
-            class="submit" />
-        </form>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XSRF - SIMULATION</title>
+</head>
+
+<body>
+  <div id="app">
+    <main class="main">
+      <header class="header">
+        <span class="header__title">
+          <h1>XSRF - SIMULATION</h1>
+          <p>/// XSRF - シミュレーション ///</p>
+        </span>
+
+        <div class="header__cta">
+          <button id="resetEverything" type="button"><span>RESET EVERYTHING</span></button>
+        </div>
+      </header>
+
+      <div class="divider">Fetch GET Section</div>
+
+      <!-- #region FETCH ALL USERS -->
+      <div class="fetch-users__header">
+        <h3>GET ALL USERS</h3>
+        <button id="getAllUsersFetchButton">FETCH</button>
       </div>
-    </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+      <div class="fetch-users">
+      </div>
+      <div class="fetch-users__data" id="fetchUsersData">
+      </div>
+      <!-- #endregion -->
+
+      <div class="divider">Form Section</div>
+
+      <div class="form-section">
+
+        <!-- #region CREATE USER WITH FETCH -->
+        <div class="form-section__card">
+          <div class="form-section__card__header">
+            <h3>CREATE USER WITH FETCH</h3>
+          </div>
+
+          <form id="createUserFetch" class="form">
+            <div class="form__fields">
+              <div style="display: grid; gap:0.5rem">
+                <label for="username_">Username</label>
+                <input class="form__input--text" name="username_" id="username_">
+              </div>
+
+              <div style="display: grid; gap:0.5rem">
+                <label for="password_">Password</label>
+                <input class="form__input--text" name="password_" id="password_" type="password">
+              </div>
+
+              <div>
+                <input class="form__input--checkbox" type="checkbox" name="is_premium_" id="is_premium_">
+                <label for="is_premium_">Premium User?</label>
+              </div>
+            </div>
+
+            <button class="form__button" id="createUserFetchButton">
+              SUBMIT / 提出
+            </button>
+          </form>
+        </div>
+        <!-- #endregion -->
+
+        <!-- #region GET ALL USERS WITH FORM ACTION -->
+        <div class="form-section__card" style="position: relative;">
+          <div class="form-section__card__header">
+            <h3>GET ALL USERS WITH ACTION</h3>
+          </div>
+
+          <div
+            style="display: flex; flex-direction: column;height: calc(100% - 99px); justify-content: center; align-items: center; text-align: center;">
+            <h5 style="font-size: 2rem;">!!!FORM IS HIDDEN!!!</h5>
+            <p style="font-family: 'Zen Kaku Gothic New'">フォームは非表示にしました</p>
+          </div>
+
+          <form action="http://localhost:8000/users" method="get">
+            <button class="form__button" id="createUserDataFetch" style="position: absolute; bottom: 0; width: 100%;">
+              FETCH / フェッチ
+            </button>
+          </form>
+        </div>
+        <!-- #endregion -->
+
+        <!-- #region CREATE USER WITH FORM ACTION -->
+        <div class="form-section__card">
+          <div class="form-section__card__header">
+            <h3>CREATE USER WITH ACTION</h3>
+          </div>
+
+          <form action="http://localhost:8000/users/safe" method="POST" id="createUserAction" class="form">
+            <div class="form__fields">
+              <div style="display: grid; gap:0.5rem">
+                <label for="username">Username</label>
+                <input class="form__input--text" name="username" id="username">
+              </div>
+
+              <div style="display: grid; gap:0.5rem">
+                <label for="password">Password</label>
+                <input class="form__input--text" type="password" name="password" id="password">
+              </div>
+
+              <div>
+                <input class="form__input--checkbox" type="checkbox" name="is_premium" id="is_premium">
+                <label for="is_premium">Premium User?</label>
+              </div>
+            </div>
+
+            <button class="form__button" id="createUserActionButton">
+              SUBMIT / 提出
+            </button>
+          </form>
+        </div>
+        <!-- #endregion -->
+
+      </div>
+    </main>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
