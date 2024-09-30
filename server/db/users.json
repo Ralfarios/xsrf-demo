@@ -1,55 +1,20 @@
 [
   {
-    "username": "muamar",
+    "username": "raja_judi_kikir",
     "password": "123123",
-    "is_premium": "false",
+    "is_premium": false,
+    "id": "Pa3WjSr4MKoUzAMHAGT-"
+  },
+  {
+    "username": "walter_white",
+    "password": "123123",
+    "is_premium": false,
     "id": "NQR9K_poTgKCHSYMIcwB-"
   },
   {
     "username": "doofenshmirtz",
     "password": "123123",
-    "is_premium": "false",
+    "is_premium": false,
     "id": "zrprq4SRZ1UlQQxsGuivB"
-  },
-  {
-    "username": "doofenshmirtz",
-    "password": "123123",
-    "is_premium": "false",
-    "id": "sAs9MqW9y5TpMNNlwHgtd"
-  },
-  {
-    "username": "si_mamat",
-    "password": "123123",
-    "is_premium": "false",
-    "token": "Du4FgJOC-NXSLthVwgSe4HK8W3Bye3KB38pE",
-    "id": "RDXLfCnJO_ZwZQtrMzpGd"
-  },
-  {
-    "username": "62821123123",
-    "password": "dGVzdDEyMzQ1",
-    "btnSubmit": "提出",
-    "id": "xh0FtMbhfS7GB1WKrnqsl"
-  },
-  {
-    "username": "akuma",
-    "password": "123123",
-    "is_premium": "true",
-    "btnSubmit": "提出",
-    "id": "0GByEtV_OsCg4z_tiZEbc"
-  },
-  {
-    "username": "akuma",
-    "password": "123123",
-    "is_premium": "true",
-    "btnSubmit": "提出",
-    "id": "0d8mq3f9OD6d9nMuI06j0"
-  },
-  {
-    "token": "WPln9DMo-mhfa2HkRBITCPbTfGQ7BJ0LnDzI",
-    "username": "akuma",
-    "password": "123123",
-    "is_premium": "true",
-    "btnSubmit": "提出",
-    "id": "1h4FLVVS7plvxzdsVDmG1"
   }
 ]

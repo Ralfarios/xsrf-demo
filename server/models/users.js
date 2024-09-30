@@ -56,11 +56,16 @@ class UsersModel {
     this.readFile((err, data) => {
       if (err) return cb(err, null);
 
-      user.id = nanoid();
+      const payload = {
+        id: nanoid(),
+        username: user.username,
+        password: user.password,
+        is_premium: user.is_premium === "true",
+      };
 
-      data.push(user);
+      data.push(payload);
       this.saveFile(data);
-      cb(null, user);
+      cb(null, payload);
     });
   }
 
