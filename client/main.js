@@ -1,15 +1,19 @@
 import './style.css';
 
-import Csrf from 'csrf';
+import { GetAllUsersFetch } from './src/getAllUsersFetch';
+import { ResetEverything } from './src/resetEverything';
+import { CreateUserFetch } from './src/createUserFetch';
+import { CreateUserAction } from './src/createUserAction';
 
-const tokens = new Csrf();
-const secret = 'S3Cre3Tz_bw4ngh1t_lh0h!'; // .envにおいて！
+document.addEventListener('DOMContentLoaded', () => {
+  const resetEverythingButton = document.getElementById('resetEverything');
+  new ResetEverything(resetEverythingButton);
 
-const token = tokens.create(secret);
+  const getallUsersButton = document.getElementById('getAllUsersFetchButton');
+  new GetAllUsersFetch(getallUsersButton);
 
-const input = document.createElement('input');
-input.type = 'hidden';
-input.name = 'token';
-input.value = token;
+  const createUserFetchForm = document.getElementById('createUserFetch');
+  new CreateUserFetch(createUserFetchForm);
 
-// document.getElementById('form').prepend(input);
+  new CreateUserAction();
+});
